@@ -66,6 +66,9 @@ jobs:
     runs-on: ubuntu-latest
     needs: test
 
+    env:
+      PAGEFIND_SKIP_DOWNLOAD: "true"
+
     permissions:
       contents: read
       pages: write
