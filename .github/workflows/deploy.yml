@@ -99,6 +99,8 @@ jobs:
 
       - name: Build production site
         run: npm run eleventy:prod
+        env:
+          PAGEFIND_SKIP_DOWNLOAD: true   # add this line
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
